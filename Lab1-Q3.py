@@ -57,3 +57,10 @@ def compare_bubble_insertion(random_data, sorted_data, reverse_data):
   output.append("Reverse Dataset")
   output.extend(compare(reverse_data))
   return output
+
+def run():
+    arrays = [[-10,20,-30,40,-50],[-10,-5,0,5,10],[100,50,0,-50,-100]]
+    out = compare_bubble_insertion(arrays[0], arrays[1], arrays[2])
+    for output in out:
+        print(output)
+run() 

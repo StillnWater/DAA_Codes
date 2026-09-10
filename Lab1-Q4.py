@@ -10,8 +10,7 @@ def find_fib(n,c=0):
 def generate_execution_observation_table(sizes):
   out=[]
   out.append("Algorithm Execution Observation Table")
-  out.append("InputSize RecursiveFactorial IterativeFactorial RecursiveFibonacci 
-IterativeFibonacci LinearSearch BinarySearch BubbleSort InsertionSort")
+  out.append("InputSize RecursiveFactorial IterativeFactorial RecursiveFibonacci IterativeFibonacci LinearSearch BinarySearch BubbleSort InsertionSort")
   for n in sizes:
     rec_fact=n+1
     iter_fact=n
@@ -21,7 +20,14 @@ IterativeFibonacci LinearSearch BinarySearch BubbleSort InsertionSort")
     bin_search=int(math.floor(math.log(n,2))+1)
     bs_sort=int((n*(n-1))/2)
     is_sort=int((n*(n-1))/2)
-    out.append(f"{n} {rec_fact} {iter_fact} {rec_fib} {iter_fib} {lin_search} {bin_search} 
-{bs_sort} {is_sort}")
+    out.append(f"{n} {rec_fact} {iter_fact} {rec_fib} {iter_fib} {lin_search} {bin_search} {bs_sort} {is_sort}")
+    return out
   
   return out
+
+def run():
+    testcases = [1,5,10]
+    out = generate_execution_observation_table(testcases)
+    for output in out:
+        print(output)
+run()
